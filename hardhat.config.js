@@ -18,4 +18,10 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.0",
+  networks: {
+    sepolia: {
+      url: process.env.URL_API_SEPOLIA,
+      accounts: [process.env.ACCOUNT_KEY_PRIVATE]
+    }
+  }
 };
